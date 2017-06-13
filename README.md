@@ -62,10 +62,12 @@ And then access Kibana UI by hitting [http://localhost:5601](http://localhost:56
 Refer to [Connect Kibana with Elasticsearch](https://www.elastic.co/guide/en/kibana/current/connect-to-elasticsearch.html) for detailed instructions about the index pattern configuration.
 
 By default, the stack exposes the following ports:
-* 5000: Logstash TCP input.
+* 12201: Logstash UDP input for Gelf.
 * 9200: Elasticsearch HTTP
 * 9300: Elasticsearch TCP transport
 * 5601: Kibana
+
+But only the ports 12201 and 5601 have to be exposed out a firewall, the other ones may stay behind it.
 
 *WARNING*: If you're using *boot2docker*, you must access it via the *boot2docker* IP address instead of *localhost*.
 
